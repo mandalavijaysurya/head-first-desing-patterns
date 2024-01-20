@@ -13,7 +13,7 @@ public class Duck {
         System.out.println("Hey I'm flying");
     }
 
-    public void display(){
-        System.out.println("This is a duck");
+    public String display(){
+        return this.getClass().getSimpleName();
     }
 }

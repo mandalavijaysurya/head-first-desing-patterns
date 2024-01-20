@@ -18,8 +18,4 @@ public class MallardDuck extends Duck {
         System.out.println("Mallard Duck is flying");
     }
 
-    @Override
-    public void display() {
-        System.out.println("This is mallard duck");
-    }
 }
