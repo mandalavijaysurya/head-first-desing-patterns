@@ -1,19 +1,24 @@
 package org.headfirstdesignpattern.chapter1;
 
-public class Duck {
-    public void quack(){
-        System.out.println("Quack Quack");
-    }
+import org.headfirstdesignpattern.chapter1.behaviours.fly.FlyBehaviour;
+import org.headfirstdesignpattern.chapter1.behaviours.quack.QuackBehaviour;
+import org.headfirstdesignpattern.chapter1.behaviours.swim.SwimBehaviour;
 
-    public void swim(){
-        System.out.println("Hey I'm swimming");
-    }
+public abstract class Duck {
 
-    public void fly(){
-        System.out.println("Hey I'm flying");
-    }
+    protected QuackBehaviour quackBehaviour;
+    protected FlyBehaviour flyBehaviour;
+    protected SwimBehaviour swimBehaviour;
 
-    public String display(){
-        return this.getClass().getSimpleName();
+    public abstract void  display();
+
+    public void performQuack(){
+        quackBehaviour.quack();
+    }
+    public void performFly(){
+        flyBehaviour.fly();
+    }
+    public void performSwim(){
+        swimBehaviour.swim();
     }
 }
