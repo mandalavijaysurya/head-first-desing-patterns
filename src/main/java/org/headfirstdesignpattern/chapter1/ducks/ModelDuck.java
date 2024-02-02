@@ -1,10 +1,8 @@
-package org.headfirstdesignpattern.chapter1.ducksubclasses;
+package org.headfirstdesignpattern.chapter1.ducks;
 
-import org.headfirstdesignpattern.chapter1.Duck;
 import org.headfirstdesignpattern.chapter1.behaviours.fly.NoFly;
 import org.headfirstdesignpattern.chapter1.behaviours.quack.Mute;
 import org.headfirstdesignpattern.chapter1.behaviours.swim.NoSwim;
-import org.headfirstdesignpattern.chapter1.behaviours.swim.Swimming;
 
 public class ModelDuck extends Duck {
 

@@ -1,4 +1,4 @@
-package org.headfirstdesignpattern.chapter1;
+package org.headfirstdesignpattern.chapter1.ducks;
 
 import org.headfirstdesignpattern.chapter1.behaviours.fly.FlyBehaviour;
 import org.headfirstdesignpattern.chapter1.behaviours.quack.QuackBehaviour;

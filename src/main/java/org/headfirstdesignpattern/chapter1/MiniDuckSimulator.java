@@ -1,8 +1,9 @@
 package org.headfirstdesignpattern.chapter1;
 
 import org.headfirstdesignpattern.chapter1.behaviours.fly.FlyingWithRockets;
-import org.headfirstdesignpattern.chapter1.ducksubclasses.MallardDuck;
-import org.headfirstdesignpattern.chapter1.ducksubclasses.ModelDuck;
+import org.headfirstdesignpattern.chapter1.ducks.Duck;
+import org.headfirstdesignpattern.chapter1.ducks.MallardDuck;
+import org.headfirstdesignpattern.chapter1.ducks.ModelDuck;
 
 public class MiniDuckSimulator {
     public static void main(String[] args) {

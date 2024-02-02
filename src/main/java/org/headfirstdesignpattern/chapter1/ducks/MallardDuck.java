@@ -1,7 +1,6 @@
-package org.headfirstdesignpattern.chapter1.ducksubclasses;
+package org.headfirstdesignpattern.chapter1.ducks;
 
 
-import org.headfirstdesignpattern.chapter1.Duck;
 import org.headfirstdesignpattern.chapter1.behaviours.fly.FlyWithWings;
 import org.headfirstdesignpattern.chapter1.behaviours.quack.Quacking;
 import org.headfirstdesignpattern.chapter1.behaviours.swim.Swimming;
