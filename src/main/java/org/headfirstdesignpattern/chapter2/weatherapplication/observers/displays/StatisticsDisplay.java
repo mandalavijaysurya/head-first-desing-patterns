@@ -1,6 +1,5 @@
 package org.headfirstdesignpattern.chapter2.weatherapplication.observers.displays;
 
-import org.headfirstdesignpattern.chapter2.weatherapplication.WeatherAppSimulator;
 import org.headfirstdesignpattern.chapter2.weatherapplication.observers.Observer;
 import org.headfirstdesignpattern.chapter2.weatherapplication.subjects.WeatherData;
 
@@ -20,8 +19,8 @@ public class StatisticsDisplay implements DisplayElement, Observer {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure){
-        this.temperature = temperature;
+    public void update(){
+        this.temperature = weatherData.getTemperature();
         maxTemperature = Math.max(temperature, maxTemperature);
         minTemperature = Math.min(temperature, minTemperature);
         temperatureSum += temperature;

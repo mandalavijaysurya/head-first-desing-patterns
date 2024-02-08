@@ -4,7 +4,7 @@ import org.headfirstdesignpattern.chapter2.weatherapplication.observers.Observer
 
 public class ThirdPartyDisplay implements DisplayElement, Observer {
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    public void update() {
 
     }
 
