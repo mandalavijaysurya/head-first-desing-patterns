@@ -2,6 +2,7 @@ package org.headfirstdesignpattern.chapter2.weatherapplication.subjects;
 
 import org.headfirstdesignpattern.chapter2.weatherapplication.observers.Observer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherData implements Subject{
@@ -10,6 +11,10 @@ public class WeatherData implements Subject{
     private float temperature;
     private float humidity;
     private float pressure;
+
+    public WeatherData(){
+        observerList = new ArrayList<>();
+    }
 
 
     @Override
@@ -30,7 +35,7 @@ public class WeatherData implements Subject{
 
     }
 
-    public void measurementsChanged(){
+    private void measurementsChanged(){
         notifyObserver();
     }
 
@@ -38,6 +43,7 @@ public class WeatherData implements Subject{
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
+        measurementsChanged();
     }
 
 }
