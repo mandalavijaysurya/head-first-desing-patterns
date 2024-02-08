@@ -5,6 +5,8 @@ import org.headfirstdesignpattern.chapter2.weatherapplication.observers.displays
 import org.headfirstdesignpattern.chapter2.weatherapplication.observers.displays.StatisticsDisplay;
 import org.headfirstdesignpattern.chapter2.weatherapplication.subjects.WeatherData;
 
+import javax.swing.*;
+
 public class WeatherAppSimulator {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
