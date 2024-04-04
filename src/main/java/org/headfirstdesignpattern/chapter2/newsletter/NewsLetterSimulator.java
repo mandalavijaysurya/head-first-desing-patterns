@@ -6,10 +6,10 @@ import org.headfirstdesignpattern.chapter2.newsletter.subscribers.NewsLetterSubs
 public class NewsLetterSimulator {
     public static void main(String[] args) {
         NewsLetter newsLetter = new NewsLetter();
-        NewsLetterSubscriber newsLetterSubscriber = new NewsLetterSubscriber("Dustin");
-        newsLetter.addSubscriber(newsLetterSubscriber);
-        NewsLetterSubscriber vls1 = new NewsLetterSubscriber("Bob");
-        newsLetter.addSubscriber(vls1);
+        NewsLetterSubscriber newsLetterSubscriber = new NewsLetterSubscriber(newsLetter, "Dustin");
+//        newsLetter.addSubscriber(newsLetterSubscriber);
+        NewsLetterSubscriber vls1 = new NewsLetterSubscriber(newsLetter, "Bob");
+//        newsLetter.addSubscriber(vls1);
         // ===== Data is being sent to all the subscribers ====
         newsLetter.setData("Something");
     }

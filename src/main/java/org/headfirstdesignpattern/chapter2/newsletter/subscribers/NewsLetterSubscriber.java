@@ -1,11 +1,15 @@
 package org.headfirstdesignpattern.chapter2.newsletter.subscribers;
 
-public class NewsLetterSubscriber implements Subscriber{
+import org.headfirstdesignpattern.chapter2.newsletter.publishers.NewsLetter;
 
+public class NewsLetterSubscriber implements Subscriber{
+    private NewsLetter newsLetter;
     private String name;
 
-    public NewsLetterSubscriber(String name){
+    public NewsLetterSubscriber(NewsLetter newsLetter, String name){
         this.name = name;
+        this.newsLetter = newsLetter;
+        this.newsLetter.addSubscriber(this);
     }
     @Override
     public void showNews(String data) {
