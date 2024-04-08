@@ -9,7 +9,6 @@ public abstract class Duck {
     protected QuackBehaviour quackBehaviour;
     protected FlyBehaviour flyBehaviour;
     protected SwimBehaviour swimBehaviour;
-
     public abstract void  display();
 
     public void performQuack(){
