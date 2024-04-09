@@ -1,22 +1,33 @@
 package org.headfirstdesignpattern.chapter4.factory.pizzastores;
 
+import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.ChicagoStyleIngredientsFactory;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.IngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.products.*;
-import org.headfirstdesignpattern.chapter4.factory.products.cheesepizzas.ChicagoStyleCheesePizza;
-import org.headfirstdesignpattern.chapter4.factory.products.clampizzas.ChicagoStyleClamPizza;
-import org.headfirstdesignpattern.chapter4.factory.products.pepperonipizzas.ChicagoStylePepperoniPizza;
+import org.headfirstdesignpattern.chapter4.factory.products.cheesepizzas.CheesePizza;
+import org.headfirstdesignpattern.chapter4.factory.products.clampizzas.ClamPizza;
+import org.headfirstdesignpattern.chapter4.factory.products.pepperonipizzas.PepperoniPizza;
 import org.headfirstdesignpattern.chapter4.factory.products.pizzatypes.PizzaType;
-import org.headfirstdesignpattern.chapter4.factory.products.veggiepizzas.ChicagoStyleVeggiePizza;
+import org.headfirstdesignpattern.chapter4.factory.products.veggiepizzas.VeggiePizza;
 
 public class ChicagoStylePizzaStore extends PizzaStore{
 
     @Override
     public Pizza createPizza(PizzaType type) {
-        return switch (type) {
-            case CHEESE -> new ChicagoStyleCheesePizza();
-            case CLAM_PIZZA -> new ChicagoStyleClamPizza();
-            case PEPPERONI_PIZZA -> new ChicagoStylePepperoniPizza();
-            case VEGGIE_PIZZA -> new ChicagoStyleVeggiePizza();
-            default -> null;
-        };
+        Pizza pizza = null;
+        IngredientsFactory ingredientsFactory = new ChicagoStyleIngredientsFactory();
+        if(type.equals(PizzaType.CHEESE)){
+           pizza = new CheesePizza(ingredientsFactory);
+           pizza.setName("Chicago Style Cheese Pizza");
+        }else if(type.equals(PizzaType.VEGGIE_PIZZA)){
+            pizza = new VeggiePizza(ingredientsFactory);
+            pizza.setName("Chicago Style Veggie Pizza");
+        }else if(type.equals(PizzaType.CLAM_PIZZA)){
+            pizza = new ClamPizza(ingredientsFactory);
+            pizza.setName("Chicago Style Clam Pizza");
+        }else if(type.equals(PizzaType.PEPPERONI_PIZZA)){
+            pizza = new PepperoniPizza(ingredientsFactory);
+            pizza.setName("Chicago Style Pepperoni Pizza");
+        }
+        return pizza;
     }
 }

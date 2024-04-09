@@ -1,22 +1,23 @@
 package org.headfirstdesignpattern.chapter4.factory.products;
 
+import org.headfirstdesignpattern.chapter4.factory.ingredients.cheese.Cheese;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.clam.Clams;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.dough.Dough;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.pepperoni.Pepperoni;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.sauce.Sauce;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Pizza {
     protected String name;
-    protected String dough;
-    protected String sauce;
-    protected List<String> toppings = new ArrayList<>();
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected Clams clam;
 
-
-    public void prepare(){
-        System.out.println("Preparing " + name);
-        System.out.println("Tossing dough... ");
-        System.out.println("Adding sauce... ");
-        System.out.println("Adding toppings: ");
-        toppings.forEach( i -> System.out.println(i + " "));
-    }
+    public abstract void prepare();
     public void bake(){
         System.out.println("Bake for 25 minutes at 350");
     }
@@ -25,6 +26,13 @@ public abstract class Pizza {
     }
     public void box(){
         System.out.println("Place pizza in official PizzaStore box");
+    }
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 
 }
