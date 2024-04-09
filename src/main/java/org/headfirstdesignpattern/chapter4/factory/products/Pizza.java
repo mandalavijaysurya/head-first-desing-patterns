@@ -5,6 +5,7 @@ import org.headfirstdesignpattern.chapter4.factory.ingredients.clam.Clams;
 import org.headfirstdesignpattern.chapter4.factory.ingredients.dough.Dough;
 import org.headfirstdesignpattern.chapter4.factory.ingredients.pepperoni.Pepperoni;
 import org.headfirstdesignpattern.chapter4.factory.ingredients.sauce.Sauce;
+import org.headfirstdesignpattern.chapter4.factory.ingredients.veggie.Veggie;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public abstract class Pizza {
     protected Cheese cheese;
     protected Pepperoni pepperoni;
     protected Clams clam;
+    protected Veggie[] veggies;
 
     public abstract void prepare();
     public void bake(){

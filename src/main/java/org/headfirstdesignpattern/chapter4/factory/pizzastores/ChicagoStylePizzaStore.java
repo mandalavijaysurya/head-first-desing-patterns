@@ -12,7 +12,7 @@ import org.headfirstdesignpattern.chapter4.factory.products.VeggiePizza;
 public class ChicagoStylePizzaStore extends PizzaStore{
 
     @Override
-    public Pizza createPizza(PizzaType type) {
+    protected Pizza createPizza(PizzaType type) {
         Pizza pizza = null;
         IngredientsFactory ingredientsFactory = new ChicagoStyleIngredientsFactory();
         if(type.equals(PizzaType.CHEESE)){
