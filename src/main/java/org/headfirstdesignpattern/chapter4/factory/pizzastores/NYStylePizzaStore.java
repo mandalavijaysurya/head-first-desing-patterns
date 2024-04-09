@@ -3,11 +3,11 @@ package org.headfirstdesignpattern.chapter4.factory.pizzastores;
 import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.IngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.NYStyleIngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.products.*;
-import org.headfirstdesignpattern.chapter4.factory.products.cheesepizzas.CheesePizza;
-import org.headfirstdesignpattern.chapter4.factory.products.clampizzas.ClamPizza;
-import org.headfirstdesignpattern.chapter4.factory.products.pepperonipizzas.PepperoniPizza;
+import org.headfirstdesignpattern.chapter4.factory.products.CheesePizza;
+import org.headfirstdesignpattern.chapter4.factory.products.ClamPizza;
+import org.headfirstdesignpattern.chapter4.factory.products.PepperoniPizza;
 import org.headfirstdesignpattern.chapter4.factory.products.pizzatypes.PizzaType;
-import org.headfirstdesignpattern.chapter4.factory.products.veggiepizzas.VeggiePizza;
+import org.headfirstdesignpattern.chapter4.factory.products.VeggiePizza;
 
 public class NYStylePizzaStore extends PizzaStore{
 

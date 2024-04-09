@@ -1,4 +1,4 @@
-package org.headfirstdesignpattern.chapter4.factory.products.veggiepizzas;
+package org.headfirstdesignpattern.chapter4.factory.products;
 
 import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.IngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.products.Pizza;

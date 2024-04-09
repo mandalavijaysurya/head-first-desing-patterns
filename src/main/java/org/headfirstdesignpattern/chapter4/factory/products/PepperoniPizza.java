@@ -1,19 +1,21 @@
-package org.headfirstdesignpattern.chapter4.factory.products.cheesepizzas;
+package org.headfirstdesignpattern.chapter4.factory.products;
 
 import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.IngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.products.Pizza;
 
-public class CheesePizza extends Pizza {
+public class PepperoniPizza extends Pizza {
+
     IngredientsFactory ingredientsFactory;
-    public CheesePizza(IngredientsFactory ingredientsFactory){
+
+    public PepperoniPizza(IngredientsFactory ingredientsFactory){
         this.ingredientsFactory = ingredientsFactory;
     }
-
     @Override
     public void prepare() {
         System.out.println("Preparing " + name);
-        dough = ingredientsFactory.createDough();
-        sauce = ingredientsFactory.createSauce();
-        cheese = ingredientsFactory.createCheese();
+        ingredientsFactory.createDough();
+        ingredientsFactory.createSauce();
+        ingredientsFactory.createCheese();
+        ingredientsFactory.createPepperoni();
     }
 }

@@ -1,13 +1,12 @@
-package org.headfirstdesignpattern.chapter4.factory.products.pepperonipizzas;
+package org.headfirstdesignpattern.chapter4.factory.products;
 
 import org.headfirstdesignpattern.chapter4.factory.ingredients.factory.IngredientsFactory;
 import org.headfirstdesignpattern.chapter4.factory.products.Pizza;
 
-public class PepperoniPizza extends Pizza {
-
+public class ClamPizza extends Pizza {
     IngredientsFactory ingredientsFactory;
 
-    public PepperoniPizza(IngredientsFactory ingredientsFactory){
+    public ClamPizza(IngredientsFactory ingredientsFactory){
         this.ingredientsFactory = ingredientsFactory;
     }
     @Override
@@ -16,6 +15,6 @@ public class PepperoniPizza extends Pizza {
         ingredientsFactory.createDough();
         ingredientsFactory.createSauce();
         ingredientsFactory.createCheese();
-        ingredientsFactory.createPepperoni();
+        ingredientsFactory.createClam();
     }
 }
