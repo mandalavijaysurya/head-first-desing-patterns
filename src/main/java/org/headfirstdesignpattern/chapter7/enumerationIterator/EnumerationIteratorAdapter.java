@@ -20,4 +20,9 @@ public class EnumerationIteratorAdapter<E> implements Iterator<E> {
     public E next() {
         return enumeration.nextElement();
     }
+
+    @Override
+    public void remove(){
+        throw new UnsupportedOperationException();
+    }
 }
